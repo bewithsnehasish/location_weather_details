@@ -12,14 +12,6 @@ async function getData(cityname) {
 
 
 button.addEventListener("click", async() =>{
-  
-  // const value = input.value;
-  // const result = await getData(value);
-  // console.log(result);
-  // cityName.innerText = `${result.location.name},${result.location.region} - ${result.location.country}`;
-  // datetime.innerText = "DATE & TIME";
-  // cityTime.innerText = result.location.localtime ;
-  // cityTemp.innerText = result.current.temp_c + "°C";
   try{
     const value = input.value;
     const result = await getData(value);
@@ -29,6 +21,9 @@ button.addEventListener("click", async() =>{
     cityTime.innerText = result.location.localtime ;
     cityTemp.innerText = result.current.temp_c + "°C";
   }catch(error){
+    cityName.innerText = "";
+    datetime.innerText = "";
+    cityTemp.innerText = "";
     cityTime.innerText = "Please Enter Correct Location!!";
   }
 });

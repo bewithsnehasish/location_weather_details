@@ -48,7 +48,6 @@ html,body{
 }
 
 #weather button:after {
-  content: "";
   background: #90EE90;
   display: block;
   position: absolute;
